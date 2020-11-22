@@ -83,43 +83,43 @@ export default class GameManager extends cc.Component {
   getResult(behavior,tile,lines): Array<Array<number>>{ // Função para retornar os resultados da máquina baseado na porcentagem
      
     switch(behavior){
-      case 0: // retorna tiles aleatórios.
+      case 0: // Retorna tiles aleatórios.
       {
         return []; 
       }
-      case 1: // retorna uma linha com tiles iguais.
+      case 1: // Retorna uma linha com tiles iguais.
        {
           if(lines == 1)
           {
-            return [[tile],[tile,-1,-1],[tile],[tile,-1,-1],[tile]];
+            return [[tile],[tile,-1,-1],[tile],[tile,-1,-1],[tile]]; // Linha do topo.
           }
           else if(lines == 2)
           {
-            return [[-1,tile,-1],[-1,tile,-1],[-1,tile,-1],[,-1,tile,-1],[-1,tile,-1]]; 
+            return [[-1,tile,-1],[-1,tile,-1],[-1,tile,-1],[,-1,tile,-1],[-1,tile,-1]]; // Linha do meio.
           }
           else
           {
-            return [[-1,-1,tile],[tile],[-1,-1,tile],[tile],[-1,-1,tile]];
+            return [[-1,-1,tile],[tile],[-1,-1,tile],[tile],[-1,-1,tile]]; // Linha do fundo.
           }
       }
       case 2: // retorna duas linhas com tiles iguais.
       {
         if(lines == 1)
         {
-          return [[tile,tile,-1],[tile,tile,-1],[tile,tile,-1],[tile,tile,-1],[tile,tile,-1]];
+          return [[tile,tile,-1],[tile,tile,-1],[tile,tile,-1],[tile,tile,-1],[tile,tile,-1]]; // Linhas do topo e do meio.
         }
         else if(lines == 2)
         {
-          return [[-1,tile,tile],[-1,tile,tile],[-1,tile,tile],[-1,tile,tile],[-1,tile,tile]]; 
+          return [[-1,tile,tile],[-1,tile,tile],[-1,tile,tile],[-1,tile,tile],[-1,tile,tile]]; // Linhas do meio e do fundo.
         }
         else
         {
-          return [[tile,-1,tile],[tile,-1,tile],[tile,-1,tile],[tile,-1,tile],[tile,-1,tile]];
+          return [[tile,-1,tile],[tile,-1,tile],[tile,-1,tile],[tile,-1,tile],[tile,-1,tile]]; // Linhas do topo e do fundo.
         }
       }
       case 3: // retorna todas as linhas com tiles iguais.
       {
-        return [[tile,tile,tile],[tile,tile,tile],[tile,tile,tile],[tile,tile,tile],[tile,tile,tile]];
+        return [[tile,tile,tile],[tile,tile,tile],[tile,tile,tile],[tile,tile,tile],[tile,tile,tile]]; // todas as linhas.
       }
 
     }
