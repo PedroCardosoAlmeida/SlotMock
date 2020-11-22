@@ -1,3 +1,12 @@
+Teste feito por Pedro Cardoso Araujo de Almeida.
+
+Para fazer a animação de 'Glow' foi criado um Node filho no prefab 'Tile', e nele colocado o componente sp.Skeleton.
+
+
+
+
+
+
 ## Starting your work on this test:
 
 1. Install the latest version of [Cocos Creator](https://cocos2d-x.org/creator).
